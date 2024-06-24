@@ -1,7 +1,7 @@
-import './App.css';
+import React from 'react';
 
-function App() {
-  return <h1 style={{ color: 'dodgerblue' }}>Microservices</h1>;
-}
+const App = () => {
+  return <div style={{ color: 'dodgerblue', fontSize: '3rem' }}>Tweet app</div>;
+};
 
 export default App;
