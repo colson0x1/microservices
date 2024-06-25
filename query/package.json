@@ -1,0 +1,24 @@
+{
+  "name": "query",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colson0x1/microservices.git"
+  },
+  "author": "COLSON",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/colson0x1/microservices/issues"
+  },
+  "homepage": "https://github.com/colson0x1/microservices#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}
