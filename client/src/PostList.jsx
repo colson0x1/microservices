@@ -7,7 +7,11 @@ const PostList = () => {
   const [posts, setPosts] = useState({});
 
   const fetchPosts = async () => {
-    const res = await axios.get('http://localhost:4000/posts');
+    // Post Microservice
+    // const res = await axios.get('http://localhost:4000/posts');
+    // Make a request to Query Microservice
+    const res = await axios.get('http://localhost:4002/posts');
+    // console.log(res.data);
 
     setPosts(res.data);
   };
@@ -27,7 +31,8 @@ const PostList = () => {
       >
         <div className='card-body'>
           <h3>{post.title}</h3>
-          <CommentList postId={post.id} />
+          {/* <CommentList postId={post.id} /> */}
+          <CommentList comments={post.comments} />
           <CommentCreate postId={post.id} />
         </div>
       </div>
