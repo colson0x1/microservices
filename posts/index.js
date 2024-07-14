@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-// Repository for every posts that begin created
+// Repository for every posts that being created
 const posts = {};
 
 app.get('/posts', (req, res) => {
