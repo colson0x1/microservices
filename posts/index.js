@@ -11,11 +11,17 @@ app.use(cors());
 // Repository for every posts that being created
 const posts = {};
 
+// This GET request handler was implemented before I wrote Query Microservice
+// i.e Now this GET request handler is unused
+// Query Microservice will do the part of fetching/retrieving all the posts
+// and comments
+// I only left it here to test out post endpoint when Im done configuring
+// Ingress NGINX
 app.get('/posts', (req, res) => {
   res.send(posts);
 });
 
-app.post('/posts', async (req, res) => {
+app.post('/posts/create', async (req, res) => {
   const id = randomBytes(4).toString('hex');
   const { title } = req.body;
 
